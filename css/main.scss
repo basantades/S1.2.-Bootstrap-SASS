@@ -18,3 +18,26 @@ width: 100vw;
     z-index: -1;
     border-radius: 100px 0 0 100px;
 }
+
+.pastilla-fondo-izquierda {
+    background-color: $color-principal;
+    position: absolute;
+    bottom: 0;
+    right: 32%;
+    width: 200%;
+    height: 80%;
+    z-index: -1;
+    border-radius: 0 100px 100px 0;
+}
+.altura-personalizada {
+    min-height: 450px;
+}
+@media screen and (max-width: 700px) {
+    .altura-personalizada {
+        min-height: 70vw;
+    }
+    
+}
+.overflow-visible {
+    overflow-x: visible !important; 
+}
