@@ -59,6 +59,10 @@ width: 100vw;
     overflow-x: visible !important; 
 }
 
+.ancho-personalizado {
+    min-width: 232px !important;
+   }
+
 .espaciado-letras {
     letter-spacing: 8px;
   }
@@ -193,5 +197,20 @@ padding-bottom: 22px;
 }
 
 
- 
+.invalid-tooltip {
+    width: 100%;
+    margin-top: 0;
+    background-color: $color-secundario;
+    border-radius: 0 0 5px 5px;
+}
 
+.was-validated .form-control:invalid, .form-control.is-invalid {
+    border-color: $color-secundario;
+    border-width: 2px;
+    border-radius: 5px 5px 0 0;
+    background-image: url("/images/icon-error.svg");
+}
+
+.form-control {
+    border-width: 2px;
+}

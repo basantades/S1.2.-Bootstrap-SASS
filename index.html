@@ -11,7 +11,7 @@
     <link rel="icon" href="/images/favicon-32x32.png" type="image/png">
 
     <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
     <header class="container-fluid position-fixed z-3 bg-white">
@@ -246,18 +246,19 @@
     <footer class="bg-primary container-fluid p-0 mt-5">
       <div class="container">
         <div class="row">
-        <div class="col-sm-12 col-md-8 col-lg-6 col-xl-5 col-xxl-4 mx-auto p-5 text-center">
-          <p class="text-uppercase text-white espaciado-letras">35,000+ already joined</p>
-          <h2 class="text-white">Stay up-to-date with what we're doing</h2>
+        <div class="col-sm-12 col-md-8 col-lg-6 col-xl-5 col-xxl-4 mx-auto py-5">
+          <p class="text-uppercase text-white espaciado-letras  text-center">35,000+ already joined</p>
+          <h2 class="text-white  text-center">Stay up-to-date with what we're doing</h2>
 
-          <form  class="d-flex justify-content-between mt-4">
-            <div class="w-auto">
-              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="example@email.com">
+          <form class="d-flex justify-content-center needs-validation mt-4 mb-2" novalidate>
+            <div class="w-auto input-group has-validation">
+              <input type="email" class="form-control ancho-personalizado" id="exampleInputEmail1" aria-describedby="emailContact" placeholder="example@email.com" required>
+              <div class="invalid-tooltip">
+                Whoops, make sure it's an email
+              </div>
             </div>
-            <button type="submit" class="btn btn-secondary">Contact Us</button>
+            <button type="submit" class="btn btn-secondary mx-3 text-nowrap">Contact Us</button>
           </form>
-
-
         </div>
       </div>
       </div>
@@ -283,5 +284,6 @@
       </div>
     </footer>
     <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/validacion-form.js"></script>
   </body>
 </html>
