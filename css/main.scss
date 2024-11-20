@@ -1,6 +1,7 @@
 
 $color-principal: #5265E1;
 $color-secundario: #FA5959;
+$color-terciario: #242946;
 $color-gris-oscuro: #50505c;
 $color-gris-texto: #8c8c94;
 $color-gris-claro: #f7f7f7;
@@ -8,7 +9,8 @@ $color-gris-claro: #f7f7f7;
 
 $theme-colors: (
   "primary": $color-principal,
-  "secondary": $color-secundario
+  "secondary": $color-secundario,
+  "terciary": $color-terciario
 );
 
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
@@ -17,6 +19,10 @@ $theme-colors: (
 main {
 overflow-x: hidden;
 width: 100vw;
+}
+
+.espacio-cabecera {
+    height: 150px;
 }
 
 .pastilla-fondo {
@@ -43,7 +49,7 @@ width: 100vw;
 .altura-personalizada {
     min-height: 440px;
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 600px) {
     .altura-personalizada {
         min-height: 70vw;
     }
@@ -56,7 +62,21 @@ width: 100vw;
 .espaciado-letras {
     letter-spacing: 8px;
   }
+.bg-tertiary {
+    background-color: $color-terciario;
+}
 
+.footer-menu {
+    color: #fff;
+}
+
+.footer-menu:hover {
+    color: $color-secundario;
+}
+
+.icono-rrss:hover {
+    filter: invert(60%) sepia(60%) saturate(3924%) hue-rotate(326deg) brightness(101%) contrast(96%);
+}
 
 // modificando estilos de bootstrap
 
@@ -84,7 +104,7 @@ width: 100vw;
 }
 
 .btn-secondary:hover {
-    background-color: transparent;  
+    background-color: #fff;  
     color: $color-secundario;                 
     border-color: $color-secundario;           
 }
@@ -101,7 +121,9 @@ p {
 
 .carousel-indicators {
     position: static;
-    width: auto;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
     border-top: none;
     flex-wrap: wrap;
 }
@@ -117,7 +139,7 @@ border-top: none;
 text-indent: 0;
 padding-bottom: 22px;
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 760px) {
     .carousel-indicators [data-bs-target] {
         min-width: 100%;
     }
