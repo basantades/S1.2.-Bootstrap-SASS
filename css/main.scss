@@ -1,7 +1,18 @@
 
-
 $color-principal: #5265E1;
 $color-secundario: #FA5959;
+$color-gris-oscuro: #50505c;
+$color-gris-texto: #8c8c94;
+$color-gris-claro: #f7f7f7;
+
+
+$theme-colors: (
+  "primary": $color-principal,
+  "secondary": $color-secundario
+);
+
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
 
 main {
 overflow-x: hidden;
@@ -30,7 +41,7 @@ width: 100vw;
     border-radius: 0 100px 100px 0;
 }
 .altura-personalizada {
-    min-height: 450px;
+    min-height: 440px;
 }
 @media screen and (max-width: 700px) {
     .altura-personalizada {
@@ -41,3 +52,124 @@ width: 100vw;
 .overflow-visible {
     overflow-x: visible !important; 
 }
+
+.espaciado-letras {
+    letter-spacing: 8px;
+  }
+
+
+// modificando estilos de bootstrap
+
+.nav-link:hover {
+    color: $color-secundario;
+}
+
+.btn {
+    padding-left: 1.5rem; 
+    padding-right: 1.5rem;
+  }
+
+.btn-secondary {
+    --bs-btn-color: #fff; 
+  }
+
+.btn-light {
+    background-color: $color-gris-claro;                 
+}
+
+.btn-primary:hover {
+  background-color: transparent;  
+  color: $color-principal;                 
+  border-color: $color-principal;           
+}
+
+.btn-secondary:hover {
+    background-color: transparent;  
+    color: $color-secundario;                 
+    border-color: $color-secundario;           
+}
+
+.btn-light:hover {
+    background-color: transparent;  
+    color: $color-gris-oscuro;                 
+    border-color: $color-gris-oscuro;           
+  }
+
+p {
+    color: $color-gris-texto;
+}
+
+.carousel-indicators {
+    position: static;
+    width: auto;
+    border-top: none;
+    flex-wrap: wrap;
+}
+.carousel-indicators [data-bs-target] {
+    position: static;
+    min-width: 30%;
+    min-height: 20px;
+    margin: 20px 0 0 0;
+opacity: 1;
+border-color: var(--bs-border-color);     
+border-width: 1px;
+border-top: none;
+text-indent: 0;
+padding-bottom: 22px;
+}
+@media screen and (max-width: 700px) {
+    .carousel-indicators [data-bs-target] {
+        min-width: 100%;
+    }
+}
+
+.carousel-indicators .active {
+    border-color: $color-secundario;     
+    border-width: 3px;  
+    padding-bottom: 20px;
+}
+.carousel-indicators div:hover {
+    color: $color-secundario;
+}
+
+
+.card-body {
+    padding-left: 0;
+    padding-right: 0;
+
+    a, p, h5 {
+        margin-left: 1rem;
+        margin: 1rem;
+    }
+}
+
+.accordion-button:hover {
+    color: $color-secundario;                 
+}
+
+.accordion-button:not(.collapsed) {
+    color: var(--bs-accordion-btn-color);
+    background-color: transparent;
+}
+.accordion-button:not(.collapsed):hover {
+    color: $color-secundario;                 
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+}
+
+
+// pelea con los iconos, para colorear svg solucion con filter, esta pagina para buscar color es dios: https://codepen.io/sosuke/pen/Pjoqqp
+
+.accordion-button:not(.collapsed)::after {
+    filter: invert(60%) sepia(60%) saturate(3924%) hue-rotate(326deg) brightness(101%) contrast(96%);
+}
+  
+.accordion-button.collapsed::after {
+    filter: invert(40%) sepia(37%) saturate(1473%) hue-rotate(201deg) brightness(94%) contrast(96%);
+}
+
+
+ 
+
