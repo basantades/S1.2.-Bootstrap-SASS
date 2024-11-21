@@ -108,13 +108,13 @@ padding: 0;
   }
 
 .navbar-toggler-icon {
-    background-image: url("/images/icon-hamburger.svg");
+    background-image: url("images/icon-hamburger.svg");
     width: 1em;
     height: 1em;
 }
 
 .navbar-collapse .navbar-toggler-icon {
-    background-image: url("/images/icon-close.svg");
+    background-image: url("images/icon-close.svg");
 }
 
 .navbar-collapse .menu-blanco {
@@ -241,12 +241,12 @@ padding-bottom: 22px;
 }
 
 .accordion-button::after {
-    background-image: url("/images/icon-arrow.svg");
+    background-image: url("images/icon-arrow.svg");
     background-position: center;
 }
 
 .accordion-button:not(.collapsed)::after {
-    background-image: url("/images/icon-arrow2.svg");
+    background-image: url("images/icon-arrow2.svg");
 
 }
   
@@ -272,7 +272,7 @@ padding-bottom: 22px;
     border-color: $color-secundario;
     border-width: 2px;
     border-radius: 5px 5px 0 0;
-    background-image: url("/images/icon-error.svg");
+    background-image: url("images/icon-error.svg");
 }
 
 .form-control {
