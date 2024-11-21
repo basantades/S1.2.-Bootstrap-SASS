@@ -23,13 +23,16 @@ La estructura de archivos y carpetas es la siguiente:
 
 ```
 /Proyecto-Responsive
-├── index.html          # Página principal con el contenido HTML
-├── /css                # Carpeta para archivos CSS compilados
-│   ├── main.css       # Estilos CSS compilados desde Sass
-│   ├── main.scss       # Archivo principal de Sass que importa otros archivos parciales
-├── /js                 # Archivos JavaScript
-│   └── scripts.js      # Funcionalidad JavaScript para interactividad
-└── README.md           # Este archivo
+├── index.html                      # Página principal con el contenido HTML
+├── /css                            # Carpeta para archivos CSS compilados
+│   ├── main.css                    # Estilos CSS compilados desde Sass
+│   ├── main.scss                   # Archivo principal de Sass que importa otros archivos parciales
+├── /images                         # Carpeta de imágenes
+├── /js                             # Archivos JavaScript
+│   ├── bootstrap.bundle.min.js     # Funcionalidad JavaScript de Bootstrap
+│   └── calidacion-forms.js         # Funcionalidad JavaScript para vlidar formulario
+├── .gitignore                      # Archivo que especifica qué archivos deben ser ignorados por Git
+└── README.md                       # Este archivo
 ```
 
 - **index.html**: Contiene el código HTML que estructura la página, incluyendo la inclusión de Bootstrap, Sass compilado, y los scripts JavaScript.
@@ -48,67 +51,6 @@ La estructura de archivos y carpetas es la siguiente:
 
 ## Instalación
 
-1. **Clonar el repositorio**:
-
-   Primero, clona este repositorio en tu máquina local usando Git:
-
    ```bash
    git clone https://github.com/tu-usuario/Proyecto-Responsive.git
    ```
-
-2. **Instalar dependencias**:
-
-   Si deseas trabajar con Sass, asegúrate de tener Node.js instalado. Luego, instala las dependencias necesarias:
-
-   ```bash
-   npm install
-   ```
-
-3. **Compilar Sass a CSS**:
-
-   Si no estás usando un compilador de Sass automático, puedes compilar los archivos Sass manualmente con el siguiente comando:
-
-   ```bash
-   npm run sass
-   ```
-
-   Esto generará el archivo `style.css` dentro de la carpeta `/css`.
-
-4. **Abrir el proyecto en tu navegador**:
-
-   Una vez que hayas configurado el proyecto, abre el archivo `index.html` en tu navegador para ver el diseño responsivo y la funcionalidad interactiva.
-
-## Funcionalidades
-
-### Menú Fijo
-
-- El menú de navegación se mantendrá visible en la parte superior de la pantalla incluso al hacer scroll. Este comportamiento se logra utilizando la clase `sticky-top` de Bootstrap.
-
-### Menú Móvil Fullscreen
-
-- En dispositivos móviles, el menú de navegación se expande para cubrir toda la pantalla al hacer clic en el icono del menú. Esto se logra usando las clases de Bootstrap y algo de JavaScript para controlar su visibilidad.
-
-### Validación de Formularios
-
-- Se utiliza la validación de formularios integrada en Bootstrap para asegurarse de que los usuarios ingresen datos correctos. El formulario validará campos como el nombre, correo electrónico, y contraseña, mostrando mensajes de error si no se completan correctamente.
-
-### Carrusel de Imágenes
-
-- El carrusel de imágenes se implementa con el componente `carousel` de Bootstrap. Puedes añadir múltiples imágenes y navegar entre ellas utilizando los controles previos y siguientes.
-
-### Hover
-
-- Se han agregado efectos hover en botones y enlaces para mejorar la experiencia de usuario. Puedes ver estos efectos al pasar el ratón sobre los elementos interactivos.
-
-## Contribuciones
-
-Si deseas contribuir a este proyecto, sigue estos pasos:
-
-1. Haz un fork del repositorio.
-2. Crea una rama para tu nueva funcionalidad o corrección de errores.
-3. Realiza los cambios y envía un Pull Request con una descripción detallada de lo que has hecho.
-```
-
----
-
-Este archivo `README.md` está listo para ser usado en tu repositorio de GitHub. Puedes copiarlo y pegarlo tal cual. Si tienes alguna modificación que quieras hacer, no dudes en decírmelo. ¡Estoy aquí para ayudar!

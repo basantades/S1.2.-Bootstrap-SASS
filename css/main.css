@@ -11555,6 +11555,10 @@ main {
   letter-spacing: 8px;
 }
 
+.espaciado-letras-suave {
+  letter-spacing: 3px;
+}
+
 .bg-tertiary {
   background-color: #242946;
 }
@@ -11576,6 +11580,10 @@ main {
   padding: 0;
 }
 
+.navbar-collapse {
+  transition: width 0s ease;
+}
+
 .navbar-toggler-icon {
   background-image: url("/images/icon-hamburger.svg");
   width: 1em;
@@ -11584,6 +11592,20 @@ main {
 
 .navbar-collapse .navbar-toggler-icon {
   background-image: url("/images/icon-close.svg");
+}
+
+.navbar-collapse .menu-blanco {
+  border-color: #4c526c !important;
+}
+
+.navbar-collapse .btn-outline-light {
+  border-color: #ffffff;
+  color: #ffffff;
+}
+
+.navbar-collapse .btn-outline-light:hover {
+  border-color: #FA5959;
+  background-color: #FA5959;
 }
 
 .nav-link:hover {
