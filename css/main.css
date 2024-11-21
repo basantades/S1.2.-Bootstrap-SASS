@@ -11504,6 +11504,11 @@ main {
   height: 150px;
 }
 
+@media screen and (max-width: 768px) {
+  .espacio-cabecera {
+    height: 100px;
+  }
+}
 .pastilla-fondo {
   background-color: #5265E1;
   position: absolute;
@@ -11547,6 +11552,15 @@ main {
   overflow-x: visible !important;
 }
 
+.ancho-cards {
+  max-width: 900px;
+}
+
+.ancho-cards div {
+  max-width: 300px;
+  margin: 0 auto;
+}
+
 .ancho-personalizado {
   min-width: 232px !important;
 }
@@ -11585,13 +11599,13 @@ main {
 }
 
 .navbar-toggler-icon {
-  background-image: url("images/icon-hamburger.svg");
+  background-image: url("../images/icon-hamburger.svg");
   width: 1em;
   height: 1em;
 }
 
 .navbar-collapse .navbar-toggler-icon {
-  background-image: url("images/icon-close.svg");
+  background-image: url("../images/icon-close.svg");
 }
 
 .navbar-collapse .menu-blanco {
@@ -11678,17 +11692,31 @@ p {
   padding-bottom: 22px;
 }
 
-@media screen and (max-width: 760px) {
+@media screen and (min-width: 769px) {
+  .carousel-indicators .active {
+    border-color: #FA5959;
+    border-width: 3px;
+    padding-bottom: 20px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .carousel-indicators div:first-of-type {
+    padding-top: 20px;
+    border-top: var(--bs-border-color) solid 1px;
+  }
   .carousel-indicators [data-bs-target] {
     min-width: 100%;
   }
+  .carousel-indicators .active::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 20%;
+    width: 60%;
+    height: 3px;
+    background-color: #FA5959;
+  }
 }
-.carousel-indicators .active {
-  border-color: #FA5959;
-  border-width: 3px;
-  padding-bottom: 20px;
-}
-
 .carousel-indicators div:hover {
   color: #FA5959;
 }
@@ -11720,12 +11748,12 @@ p {
 }
 
 .accordion-button::after {
-  background-image: url("images/icon-arrow.svg");
+  background-image: url("../images/icon-arrow.svg");
   background-position: center;
 }
 
 .accordion-button:not(.collapsed)::after {
-  background-image: url("images/icon-arrow2.svg");
+  background-image: url("../images/icon-arrow2.svg");
 }
 
 .invalid-tooltip {
@@ -11739,7 +11767,7 @@ p {
   border-color: #FA5959;
   border-width: 2px;
   border-radius: 5px 5px 0 0;
-  background-image: url("images/icon-error.svg");
+  background-image: url("../images/icon-error.svg");
 }
 
 .form-control {

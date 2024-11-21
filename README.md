@@ -52,5 +52,5 @@ La estructura de archivos y carpetas es la siguiente:
 ## Instalación
 
    ```bash
-   git clone https://github.com/tu-usuario/Proyecto-Responsive.git
+   git clone https://github.com/basantades/S1.2.-Bootstrap-SASS.git
    ```
