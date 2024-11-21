@@ -14,23 +14,57 @@
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
-    <header class="container-fluid position-fixed z-3 bg-white">
+    <header>
+    <div class="collapse navbar-collapse" id="navbarScroll">
+      <div class="navbar">
+        <div class="container mx-4 my-5">
+          <a class="navbar-brand" href="#">
+            <img src="/images/logo-bookmark-white.svg" height="30" alt="" />
+          </a>
+          <div
+            class="navbar-toggler"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarScroll"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+        </div>
+        </div>
+        <div class="col-12">
+          <ul class="nav col-12 text-uppercase d-flex flex-column p-4">
+            <li><a href="#" class="nav-link py-4 menu-blanco text-center border-top border-bottom">Features</a></li>
+            <li><a href="#" class="nav-link py-4 menu-blanco text-center border-bottom">Pricing</a></li>
+            <li><a href="#" class="nav-link py-4 menu-blanco text-center border-bottom">Contact</a></li>
+            <li><a href="#" class="btn btn-outline-light mt-4">Login</a></li>
+          </ul>
+      <div class="col-12 p-4 d-flex gap-4 justify-content-center mt-auto">
+        <a href="#">
+          <img src="/images/icon-facebook.svg" height="20" alt="" class="icono-rrss"/>
+        </a>
+        <a href="#">
+          <img src="/images/icon-twitter.svg" height="20" alt=""  class="icono-rrss" />
+        </a>
+      </div>
+    </div>
+    </div>
+    </div>
+
+    <div class="container-fluid position-fixed z-3 bg-white">
       <div class="container">
       <nav class="navbar navbar-expand-md">
         <div class="container-fluid my-5">
           <a class="navbar-brand" href="#">
             <img src="/images/logo-bookmark.svg" height="30" alt="" />
           </a>
-          <button
+          <div
             class="navbar-toggler"
-            type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarScroll"
             aria-label="Toggle navigation"
           >
             <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarScroll">
+        </div>
+            <div class="d-none d-md-block">
             <ul class="navbar-nav ms-auto gap-4 text-uppercase">
               <li class="nav-item">
                 <a class="nav-link" href="#">Features</a>
@@ -49,7 +83,8 @@
         </div>
       </nav>
     </div>
-    </header>
+  </div>
+  </header>
     <main class="container-fluid">
         <div class="container">
           <div class="espacio-cabecera mb-5"></div>
@@ -60,11 +95,11 @@
             </div>
             <div class="col-md-12 col-lg-6 order-lg-1 text-center text-lg-start mb-5">
               <h1 class="display-4 fw-semibold">A Simple Bookmark Manager</h1>
-              <p>
-                A clean and simple interface to organize your favourite websites. Open a new browser tab and see your sites load instantly. Try it for free.
-              </p>
-              <a href="#" class="btn btn-primary shadow me-3">Get it on Chrome</a>
-              <a href="#" class="btn btn-light shadow">Get it on Firefox</a>
+              <p class="my-4">A clean and simple interface to organize your favourite websites. Open a new browser tab and see your sites load instantly. Try it for free.</p>
+              <div class="d-flex justify-content-center justify-content-lg-start gap-3 flex-wrap">
+              <a href="#" class="btn btn-primary shadow text-nowrap">Get it on Chrome</a>
+              <a href="#" class="btn btn-light shadow text-nowrap">Get it on Firefox</a>
+              </div>
             </div>
           </div>
           </div>
@@ -72,7 +107,7 @@
           <div class="row">
             <div  class="col-sm-12 col-md-6 mx-auto text-center my-5">
             <h2>Features</h2>
-            <p>
+            <p class="my-4">
               Our aim is to make it quick and easy for you to access your favourite websites. Your bookmarks sync between your devices so you can access them on the go.
             </p>
           </div>
@@ -90,10 +125,11 @@
               <div class="col-md-12 col-lg-6 position-relative mb-5 d-flex justify-content-end justify-content-md-center altura-personalizada pb-3">
                 <img src="/images/illustration-features-tab-1.svg" alt="" class="img-fluid mb-auto"/>
                 <div class="pastilla-fondo-izquierda"></div>
+                <div class="fondo-blanco"></div>
               </div>
               <div class="col-md-12 col-lg-6 text-center text-lg-start mb-5 bg-white">
                 <h2>Bookmark in one click</h2>
-                <p>Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favourite sites.</p>
+                <p class="my-4">Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favourite sites.</p>
                 <a href="#" class="btn btn-primary shadow me-3">More Info</a>
               </div>
             </div>
@@ -103,10 +139,11 @@
                 <div class="col-md-12 col-lg-6 position-relative mb-5 d-flex justify-content-end justify-content-md-center altura-personalizada pb-3">
                   <img src="/images/illustration-features-tab-2.svg" alt="" class="img-fluid mb-auto"/>
                   <div class="pastilla-fondo-izquierda"></div>
+                  <div class="fondo-blanco"></div>
                 </div>
                 <div class="col-md-12 col-lg-6 text-center text-lg-start mb-5 bg-white">
                   <h2>Intelligent search</h2>
-                  <p>Orur powerful search feature will help you find saved sites in no time at all. No need to trawl through all of your bookmarks.</p>
+                  <p class="my-4">Orur powerful search feature will help you find saved sites in no time at all. No need to trawl through all of your bookmarks.</p>
                   <a href="#" class="btn btn-primary shadow me-3">More Info</a>
                 </div>
               </div>
@@ -116,10 +153,11 @@
               <div class="col-md-12 col-lg-6 position-relative mb-5 d-flex justify-content-end justify-content-md-center altura-personalizada pb-3">
                 <img src="/images/illustration-features-tab-3.svg" alt="" class="img-fluid  mb-auto"/>
                 <div class="pastilla-fondo-izquierda"></div>
+                <div class="fondo-blanco"></div>
               </div>
               <div class="col-md-12 col-lg-6 text-center text-lg-start mb-5 bg-white">
                 <h2>Share your bookmarks</h2>
-                <p>Easyly share your bookmarks across any social media platform. You can even add a short note to share with others.</p>
+                <p class="my-4">Easyly share your bookmarks across any social media platform. You can even add a short note to share with others.</p>
                 <a href="#" class="btn btn-primary shadow me-3">More Info</a>
               </div>
             </div>
@@ -131,7 +169,7 @@
           <div class="row">
             <div  class="col-sm-12 col-md-6 mx-auto text-center mt-5">
           <h2>Download the extension</h2>
-          <p>
+          <p class="my-4">
             We've got more browsers in the pipeline. Please do let us know if you've got a favourite you'd like us to prioritize.
           </p>
           </div>
@@ -187,7 +225,7 @@
           <div class="row">
             <div  class="col-sm-12 col-md-6 col-xxl-4 mx-auto text-center mt-5">
               <h2>Frequently Asked Questions</h2>
-              <p>
+              <p class="my-4">
                 Here are some of our FAQs. If you have any other questions you'd like answered please feel free to email us.
               </p>
           </div>
@@ -248,16 +286,16 @@
         <div class="row">
         <div class="col-sm-12 col-md-8 col-lg-6 col-xl-5 col-xxl-4 mx-auto py-5">
           <p class="text-uppercase text-white espaciado-letras  text-center">35,000+ already joined</p>
-          <h2 class="text-white  text-center">Stay up-to-date with what we're doing</h2>
+          <h2 class="text-white  text-center mb-2">Stay up-to-date with what we're doing</h2>
 
-          <form class="d-flex justify-content-center needs-validation mt-4 mb-2" novalidate>
-            <div class="w-auto input-group has-validation">
+          <form class="d-flex flex-column flex-md-row gap-5 gap-md-3 needs-validation mt-5 mb-2 mx-4 mx-md-0" novalidate>
+            <div class="w-auto input-group has-validation ">
               <input type="email" class="form-control ancho-personalizado" id="exampleInputEmail1" aria-describedby="emailContact" placeholder="example@email.com" required>
               <div class="invalid-tooltip">
                 Whoops, make sure it's an email
               </div>
             </div>
-            <button type="submit" class="btn btn-secondary mx-3 text-nowrap">Contact Us</button>
+            <button type="submit" class="btn btn-secondary text-nowrap">Contact Us</button>
           </form>
         </div>
       </div>
@@ -265,12 +303,12 @@
       <div class="bg-tertiary m-0 py-4 py-md-0">
           <div class="container d-flex flex-wrap align-items-center justify-content-center justify-content-md-start">
             <a class="navbar-brand col-12 col-md-auto p-4 d-flex justify-content-center" href="#">
-              <img src="/images/logo-bookmark-white.svg" height="30" alt="" />
+              <img src="/images/logo-bookmark-footer.svg" height="30" alt="" />
             </a>
-            <ul class="nav col-12 col-md-auto me-lg-auto justify-content-center text-uppercase d-block d-md-flex p-4 mx-4">
-              <li><a href="#" class="nav-link px-2 footer-menu text-center">Features</a></li>
-              <li><a href="#" class="nav-link px-2 footer-menu text-center">Pricing</a></li>
-              <li><a href="#" class="nav-link px-2 footer-menu text-center">Contact</a></li>
+            <ul class="nav col-12 col-md-auto me-lg-auto justify-content-center text-uppercase d-flex flex-column flex-md-row gap-3 p-4 mx-lg-4">
+              <li><a href="#" class="nav-link px-2 menu-blanco text-center">Features</a></li>
+              <li><a href="#" class="nav-link px-2 menu-blanco text-center">Pricing</a></li>
+              <li><a href="#" class="nav-link px-2 menu-blanco text-center">Contact</a></li>
             </ul>
             <div class="text-end col-12 col-md-auto p-4 d-flex gap-4 justify-content-center">
               <a href="#">

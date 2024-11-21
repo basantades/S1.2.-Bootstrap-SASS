@@ -11526,6 +11526,14 @@ main {
   border-radius: 0 100px 100px 0;
 }
 
+.fondo-blanco {
+  background-color: #fff;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+}
+
 .altura-personalizada {
   min-height: 440px;
 }
@@ -11551,11 +11559,11 @@ main {
   background-color: #242946;
 }
 
-.footer-menu {
+.menu-blanco {
   color: #fff;
 }
 
-.footer-menu:hover {
+.menu-blanco:hover {
   color: #FA5959;
 }
 
@@ -11563,11 +11571,35 @@ main {
   filter: invert(60%) sepia(60%) saturate(3924%) hue-rotate(326deg) brightness(101%) contrast(96%);
 }
 
+.navbar-toggler {
+  border: none;
+  padding: 0;
+}
+
+.navbar-toggler-icon {
+  background-image: url("/images/icon-hamburger.svg");
+  width: 1em;
+  height: 1em;
+}
+
+.navbar-collapse .navbar-toggler-icon {
+  background-image: url("/images/icon-close.svg");
+}
+
 .nav-link:hover {
   color: #FA5959;
 }
 
+.navbar-collapse {
+  background-color: rgba(36, 41, 70, 0.9254901961);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+}
+
 .btn {
+  border-width: 2px;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
 }
@@ -11665,12 +11697,13 @@ p {
   box-shadow: none;
 }
 
-.accordion-button:not(.collapsed)::after {
-  filter: invert(60%) sepia(60%) saturate(3924%) hue-rotate(326deg) brightness(101%) contrast(96%);
+.accordion-button::after {
+  background-image: url("/images/icon-arrow.svg");
+  background-position: center;
 }
 
-.accordion-button.collapsed::after {
-  filter: invert(40%) sepia(37%) saturate(1473%) hue-rotate(201deg) brightness(94%) contrast(96%);
+.accordion-button:not(.collapsed)::after {
+  background-image: url("/images/icon-arrow2.svg");
 }
 
 .invalid-tooltip {

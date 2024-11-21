@@ -2,6 +2,7 @@
 $color-principal: #5265E1;
 $color-secundario: #FA5959;
 $color-terciario: #242946;
+$color-terciario-op: #242946ec;
 $color-gris-oscuro: #50505c;
 $color-gris-texto: #8c8c94;
 $color-gris-claro: #f7f7f7;
@@ -46,6 +47,14 @@ width: 100vw;
     z-index: -1;
     border-radius: 0 100px 100px 0;
 }
+.fondo-blanco {
+    background-color: #fff;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+}
+
 .altura-personalizada {
     min-height: 440px;
 }
@@ -70,11 +79,11 @@ width: 100vw;
     background-color: $color-terciario;
 }
 
-.footer-menu {
+.menu-blanco {
     color: #fff;
 }
 
-.footer-menu:hover {
+.menu-blanco:hover {
     color: $color-secundario;
 }
 
@@ -84,11 +93,35 @@ width: 100vw;
 
 // modificando estilos de bootstrap
 
+.navbar-toggler {
+border: none;
+padding: 0;
+}
+
+.navbar-toggler-icon {
+    background-image: url("/images/icon-hamburger.svg");
+    width: 1em;
+    height: 1em;
+}
+
+.navbar-collapse .navbar-toggler-icon {
+    background-image: url("/images/icon-close.svg");
+}
+
 .nav-link:hover {
     color: $color-secundario;
 }
 
+.navbar-collapse {
+    background-color: $color-terciario-op;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+}
+
 .btn {
+    border-width: 2px;
     padding-left: 1.5rem; 
     padding-right: 1.5rem;
   }
@@ -185,16 +218,25 @@ padding-bottom: 22px;
     box-shadow: none;
 }
 
-
-// pelea con los iconos, para colorear svg solucion con filter, esta pagina para buscar color es dios: https://codepen.io/sosuke/pen/Pjoqqp
+.accordion-button::after {
+    background-image: url("/images/icon-arrow.svg");
+    background-position: center;
+}
 
 .accordion-button:not(.collapsed)::after {
-    filter: invert(60%) sepia(60%) saturate(3924%) hue-rotate(326deg) brightness(101%) contrast(96%);
+    background-image: url("/images/icon-arrow2.svg");
+
 }
   
-.accordion-button.collapsed::after {
-    filter: invert(40%) sepia(37%) saturate(1473%) hue-rotate(201deg) brightness(94%) contrast(96%);
-}
+// pelea con los iconos, para colorear svg solucion con filter, esta pagina para buscar color es dios: https://codepen.io/sosuke/pen/Pjoqqp
+
+// .accordion-button.collapsed::after {
+    
+//     filter: invert(40%) sepia(37%) saturate(1473%) hue-rotate(201deg) brightness(94%) contrast(96%);
+// }
+// .accordion-button:not(.collapsed)::after {
+//     filter: invert(60%) sepia(60%) saturate(3924%) hue-rotate(326deg) brightness(101%) contrast(96%);
+// }
 
 
 .invalid-tooltip {
